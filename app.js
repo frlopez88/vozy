@@ -31,3 +31,27 @@ const cargaData = async () => {
 }
 
 cargaData()
+
+
+const crearOrden = async () => {
+
+    const data = {
+        ws_u: "UVOZY",
+        ws_p: "s5czl5r6",
+        cliente: "806968",
+        actividad: "CSP",
+        comentario: "Me cambiaron los canales",
+        motivo: "164"
+    };
+
+    const result = await fetch("https://wscbdev.cablecolor.hn/API/crearOrden", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            body: JSON.stringify(data)
+        }
+    })
+
+    console.log(result)
+
+}
