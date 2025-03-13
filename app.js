@@ -47,9 +47,9 @@ const crearOrden = async () => {
     const result = await fetch("https://wscbdev.cablecolor.hn/API/crearOrden", {
         method: "POST",
         headers: {
-            'Content-Type': 'application/json',
-            body: JSON.stringify(data)
-        }
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
 
     console.log(result)
